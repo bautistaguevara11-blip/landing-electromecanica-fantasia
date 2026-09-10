@@ -89,7 +89,7 @@ export default function Catalog() {
                   href={buildWhatsAppLink(`Hola, quiero consultar por: ${name}`)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-5 inline-flex items-center justify-center gap-2 rounded-md bg-navy-900 px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-accent hover:text-navy-950"
+                  className="mt-5 inline-flex items-center justify-center gap-2 rounded-md bg-navy-900 px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-accent"
                 >
                   <MessageCircle className="h-4 w-4" strokeWidth={2.5} />
                   Consultar por WhatsApp

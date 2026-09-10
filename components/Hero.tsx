@@ -46,7 +46,7 @@ export default function Hero() {
         <div className="mt-10 flex flex-col gap-4 sm:flex-row">
           <a
             href="#catalogo"
-            className="inline-flex items-center justify-center gap-2 rounded-md bg-accent px-6 py-3.5 text-base font-bold text-navy-950 transition-colors hover:bg-accent-light"
+            className="inline-flex items-center justify-center gap-2 rounded-md bg-accent px-6 py-3.5 text-base font-bold text-white transition-colors hover:bg-accent-light"
           >
             <PackageSearch className="h-5 w-5" strokeWidth={2.5} />
             Ver productos

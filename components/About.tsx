@@ -24,7 +24,7 @@ export default function About() {
             </h2>
 
             <div className="mt-8 flex gap-4 rounded-lg border border-navy-100 bg-navy-50/60 p-5">
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-navy-900 text-accent">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-navy-900 text-accent-light">
                 <Users className="h-5 w-5" strokeWidth={2.5} />
               </span>
               <p className="text-sm leading-relaxed text-navy-700">

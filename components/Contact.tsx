@@ -7,7 +7,7 @@ export default function Contact() {
       <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
         <div className="grid gap-14 lg:grid-cols-5 lg:gap-16">
           <div className="lg:col-span-2">
-            <span className="text-sm font-bold uppercase tracking-wider text-accent">
+            <span className="text-sm font-bold uppercase tracking-wider text-accent-light">
               Contacto
             </span>
             <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">
@@ -24,7 +24,7 @@ export default function Contact() {
               )}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-8 inline-flex items-center justify-center gap-2 rounded-md bg-accent px-6 py-3.5 text-base font-bold text-navy-950 transition-colors hover:bg-accent-light"
+              className="mt-8 inline-flex items-center justify-center gap-2 rounded-md bg-accent px-6 py-3.5 text-base font-bold text-white transition-colors hover:bg-accent-light"
             >
               <MessageCircle className="h-5 w-5" strokeWidth={2.5} />
               Consultar por WhatsApp
@@ -38,7 +38,7 @@ export default function Contact() {
               rel="noopener noreferrer"
               className="flex gap-4 rounded-xl border border-white/10 bg-white/[0.04] p-5 transition-colors hover:bg-white/[0.08]"
             >
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-white/10 text-accent">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-white/10 text-accent-light">
                 <MapPin className="h-5 w-5" strokeWidth={2.25} />
               </span>
               <div>
@@ -55,7 +55,7 @@ export default function Contact() {
               rel="noopener noreferrer"
               className="flex gap-4 rounded-xl border border-white/10 bg-white/[0.04] p-5 transition-colors hover:bg-white/[0.08]"
             >
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-white/10 text-accent">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-white/10 text-accent-light">
                 <Phone className="h-5 w-5" strokeWidth={2.25} />
               </span>
               <div>
@@ -70,7 +70,7 @@ export default function Contact() {
               href={`mailto:${EMAIL}`}
               className="flex gap-4 rounded-xl border border-white/10 bg-white/[0.04] p-5 transition-colors hover:bg-white/[0.08] sm:col-span-2"
             >
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-white/10 text-accent">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-white/10 text-accent-light">
                 <Mail className="h-5 w-5" strokeWidth={2.25} />
               </span>
               <div>
@@ -85,7 +85,7 @@ export default function Contact() {
 
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row">
           <div className="flex items-center gap-2.5">
-            <span className="flex h-8 w-8 items-center justify-center rounded-md bg-accent text-navy-950">
+            <span className="flex h-8 w-8 items-center justify-center rounded-md bg-accent text-white">
               <Factory className="h-4 w-4" strokeWidth={2.5} />
             </span>
             <span className="text-sm font-bold">

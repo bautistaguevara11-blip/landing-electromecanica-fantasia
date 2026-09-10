@@ -66,7 +66,7 @@ export default function Generators() {
             </p>
 
             <div className="mt-8 flex gap-4 rounded-lg border border-white/10 bg-white/5 p-5">
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-accent text-navy-950">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-accent text-white">
                 <Wine className="h-5 w-5" strokeWidth={2.5} />
               </span>
               <p className="text-sm leading-relaxed text-white/80">
@@ -87,7 +87,7 @@ export default function Generators() {
               )}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-8 inline-flex items-center justify-center gap-2 rounded-md bg-accent px-6 py-3.5 text-base font-bold text-navy-950 transition-colors hover:bg-accent-light"
+              className="mt-8 inline-flex items-center justify-center gap-2 rounded-md bg-accent px-6 py-3.5 text-base font-bold text-white transition-colors hover:bg-accent-light"
             >
               <MessageCircle className="h-5 w-5" strokeWidth={2.5} />
               Consultar disponibilidad

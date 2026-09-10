@@ -59,7 +59,7 @@ export default function Services() {
               key={title}
               className="group rounded-xl border border-navy-100 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
             >
-              <span className="flex h-12 w-12 items-center justify-center rounded-lg bg-navy-900 text-accent transition-colors group-hover:bg-accent group-hover:text-navy-950">
+              <span className="flex h-12 w-12 items-center justify-center rounded-lg bg-navy-900 text-accent-light transition-colors group-hover:bg-accent group-hover:text-white">
                 <Icon className="h-6 w-6" strokeWidth={2} />
               </span>
               <h3 className="mt-5 text-lg font-bold leading-snug text-navy-900">
