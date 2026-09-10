@@ -1,6 +1,5 @@
+import Image from "next/image";
 import {
-  Droplets,
-  Fan,
   Gauge,
   Lightbulb,
   MessageCircle,
@@ -13,7 +12,8 @@ import { buildWhatsAppLink } from "@/lib/constants";
 type Product = {
   name: string;
   description: string;
-  icon: LucideIcon;
+  icon?: LucideIcon;
+  image?: string;
 };
 
 const PRODUCTS: Product[] = [
@@ -38,14 +38,19 @@ const PRODUCTS: Product[] = [
     icon: PanelsTopLeft,
   },
   {
-    name: "Extractor Industrial",
-    description: "Ventilación y extracción de aire para ambientes industriales.",
-    icon: Fan,
+    name: "Bombas de calefacción",
+    description: "Bombas Rowa para sistemas de calefacción residencial e industrial.",
+    image: "/images/bombas-calefaccion.png",
   },
   {
-    name: "Electrobomba",
-    description: "Instalación y mantenimiento de sistemas de bombeo industrial.",
-    icon: Droplets,
+    name: "Bombas presurizadoras",
+    description: "Bombas presurizadoras Rowa para mejorar la presión de agua.",
+    image: "/images/bombas-presurizadoras.png",
+  },
+  {
+    name: "Extractores industriales",
+    description: "Fabricación de extractores industriales a medida.",
+    image: "/images/extractores.png",
   },
 ];
 
@@ -67,17 +72,31 @@ export default function Catalog() {
         </div>
 
         <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {PRODUCTS.map(({ name, description, icon: Icon }) => (
+          {PRODUCTS.map(({ name, description, icon: Icon, image }) => (
             <div
               key={name}
               className="flex flex-col overflow-hidden rounded-xl border border-navy-100 bg-white shadow-sm transition-shadow hover:shadow-md"
             >
-              <div className="flex h-40 items-center justify-center bg-gradient-to-br from-navy-800 to-navy-600">
-                <Icon
-                  className="h-14 w-14 text-accent-light"
-                  strokeWidth={1.5}
-                />
-              </div>
+              {image ? (
+                <div className="relative aspect-square w-full bg-white">
+                  <Image
+                    src={image}
+                    alt={name}
+                    fill
+                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                    className="object-contain"
+                  />
+                </div>
+              ) : (
+                <div className="flex h-40 items-center justify-center bg-gradient-to-br from-navy-800 to-navy-600">
+                  {Icon && (
+                    <Icon
+                      className="h-14 w-14 text-accent-light"
+                      strokeWidth={1.5}
+                    />
+                  )}
+                </div>
+              )}
 
               <div className="flex flex-1 flex-col p-6">
                 <h3 className="text-lg font-bold text-navy-900">{name}</h3>

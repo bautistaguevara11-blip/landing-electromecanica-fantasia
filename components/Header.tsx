@@ -1,14 +1,18 @@
 "use client";
 
 import { useState } from "react";
-import { Factory, Menu, MessageCircle, X } from "lucide-react";
+import Image from "next/image";
+import { Menu, MessageCircle, X } from "lucide-react";
 import { buildWhatsAppLink } from "@/lib/constants";
 
 const NAV_LINKS = [
   { href: "#nosotros", label: "Nosotros" },
   { href: "#servicios", label: "Servicios" },
-  { href: "#grupos-electrogenos", label: "Grupos Electrógenos" },
+  { href: "#marcas", label: "Marcas" },
+  { href: "#rubros", label: "Rubros" },
+  { href: "#grupos-electrogenos", label: "Generadores" },
   { href: "#catalogo", label: "Catálogo" },
+  { href: "#videos", label: "Videos" },
   { href: "#contacto", label: "Contacto" },
 ];
 
@@ -19,8 +23,15 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-navy-700 bg-navy-900 text-white">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <a href="#top" className="flex items-center gap-2.5 shrink-0">
-          <span className="flex h-9 w-9 items-center justify-center rounded-md bg-accent text-white">
-            <Factory className="h-5 w-5" strokeWidth={2.5} />
+          <span className="relative flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-md bg-white p-1">
+            <Image
+              src="/images/logo.jpeg"
+              alt="Electromecánica Fantasía"
+              fill
+              sizes="44px"
+              className="object-contain"
+              priority
+            />
           </span>
           <span className="leading-tight">
             <span className="block text-sm font-bold tracking-wide sm:text-base">
@@ -32,7 +43,7 @@ export default function Header() {
           </span>
         </a>
 
-        <nav className="hidden items-center gap-7 lg:flex">
+        <nav className="hidden items-center gap-5 xl:flex">
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}
@@ -60,7 +71,7 @@ export default function Header() {
             onClick={() => setOpen((v) => !v)}
             aria-expanded={open}
             aria-label="Abrir menú"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-md text-white lg:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-md text-white xl:hidden"
           >
             {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
@@ -68,7 +79,7 @@ export default function Header() {
       </div>
 
       {open && (
-        <div className="border-t border-navy-700 bg-navy-900 px-4 pb-4 lg:hidden">
+        <div className="border-t border-navy-700 bg-navy-900 px-4 pb-4 xl:hidden">
           <nav className="flex flex-col gap-1 pt-2">
             {NAV_LINKS.map((link) => (
               <a
