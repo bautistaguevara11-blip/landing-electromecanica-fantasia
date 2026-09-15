@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { SITE_URL } from "@/lib/constants";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,10 +13,36 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const SITE_TITLE =
+  "Electromecánica Fantasía | Grupos Electrógenos, Bombas y Service en Mendoza";
+const SITE_DESCRIPTION =
+  "Más de 50 años de trayectoria en Mendoza y Cuyo. Venta, alquiler y service de grupos electrógenos, bombas presurizadoras, extractores industriales y reparación de motores. Service oficial Rowa y Czerweny. Contactanos por WhatsApp.";
+const OG_IMAGE = {
+  url: "/images/generador-campo.jpeg",
+  width: 1206,
+  height: 1487,
+  alt: "Grupo electrógeno Electromecánica Fantasía operando en el campo",
+};
+
 export const metadata: Metadata = {
-  title: "Electromecánica Fantasía S.R.L. | Mendoza, Argentina",
-  description:
-    "Más de 50 años de trayectoria industrial en Mendoza y Cuyo. Reparación de motores, tableros eléctricos, extractores, electrobombas, y venta y alquiler de grupos electrógenos y torres de iluminación. Service oficial Rowa y Czerweny.",
+  metadataBase: new URL(SITE_URL),
+  title: SITE_TITLE,
+  description: SITE_DESCRIPTION,
+  openGraph: {
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    url: "/",
+    siteName: "Electromecánica Fantasía",
+    images: [OG_IMAGE],
+    locale: "es_AR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    images: [OG_IMAGE.url],
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
